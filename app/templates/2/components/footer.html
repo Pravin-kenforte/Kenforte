@@ -1,0 +1,40 @@
+<section id="contact">
+    <div class="contact-section">
+        <div class="contact-container">
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>{{ contact_section.title }}</h2>
+                <form>
+                    {% for field in contact_section.form.fields %}
+                    {% if field.type == "textarea" %}
+                    <textarea rows="{{ field.rows }}" placeholder="{{ field.placeholder }}" {% if field.required
+                        %}required{% endif %}></textarea>
+                    {% else %}
+                    <input type="{{ field.type }}" placeholder="{{ field.placeholder }}" {% if field.required
+                        %}required{% endif %}>
+                    {% endif %}
+                    {% endfor %}
+                    <button type="submit">{{ contact_section.form.button_text }}</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>{{ contact_section.info_title }}</h2>
+                <p>{{ contact_section.info_quote }}</p>
+
+                {% for item in contact_section.contact_info %}
+                <div class="info-item">
+                    <i class="{{ item.icon }}"></i>
+                    <div>
+                        <h4>{{ item.label }}</h4>
+                        <p>{{ item.value }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+{% extends "includes/base.html" %}
+{% block content %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles/styles4.css') }}" rel="stylesheet">
+</head>
+{% include "4/components/header.html" %}
+
+<body class="pro-3-body">
+    <section class="pro-3-section">
+
+
+        <section class="pro-3-section">
+            <a href="{{ full_look.back_link }}" class="pro-3-back">
+                {{ full_look.back_text }}
+            </a>
+            <h4 class="pro-3-subtitle">{{ full_look.subtitle }}</h4>
+            <h1 class="pro-3-title">
+                {{ full_look.title | safe }}
+            </h1>
+
+            <div class="pro-3-gallery">
+                {% for image in full_look.gallery_images %}
+                <img src="{{ image.src }}" alt="{{ image.alt }}" class="pro-3-image" />
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="stay-in-touch">
+            <div class="contact-box">
+                <p>{{ how_we_work_home.stay_in_touch_text }}</p>
+            </div>
+        </section>
+</body>
+
+</html>
+
+{% include "4/components/footer.html" %}
+{% endblock %}

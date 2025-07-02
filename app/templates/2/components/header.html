@@ -1,0 +1,35 @@
+<header class="site-header">
+    <div class="left-header">
+        <div class="logo">
+            {{ header['logo'] }}
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-links" id="mainNav">
+        {% for link in header.nav_links %}
+        <a href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+    </nav>
+</header>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("mainNav");
+        nav.classList.toggle("show");
+    }
+
+    // Close menu when a link is clicked (on mobile)
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const nav = document.getElementById("mainNav");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("show");
+            });
+        });
+    });
+</script>

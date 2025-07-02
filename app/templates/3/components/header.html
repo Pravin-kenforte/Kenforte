@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenforte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+</head>
+
+<body>
+
+    <section>
+        <header>
+
+            <div class="logo-area">
+                <div class="logo-text">
+                    <span class="company">KENFORTE<sup>®</sup></span>
+                    <span class="subtext">CNC Tools & Equipments Pvt. Ltd.</span>
+                </div>
+            </div>
+
+            <!-- Toggle button for mobile -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav>
+                <!-- Static nav links -->
+                {% for link in header.nav_links %}
+                <a href="{{ link['url'] }}" {% if link.get("active") %}class="active" {% endif %}>
+                    <i class="{{ link['icon'] }}"></i> {{ link['name'] }}
+                </a>
+                {% endfor %}
+
+                <!-- Dropdowns for Products, Services, Resources -->
+                {% for dropdown in header.dropdowns %}
+                <div class="nav-item">
+                    <a href="#" class="products"><i class="{{ dropdown['icon'] }}"></i> {{ dropdown['title'] }}</a>
+                    <div class="dropdown-panel">
+                        <ul>
+                            {% for item in dropdown["items"] %}
+                            <li>
+                                {% if item.get("url") %}
+                                <a href="{{ item['url'] }}">
+                                    <i class="{{ item['icon'] }}"></i> {{ item['name'] }}
+                                </a>
+                                {% else %}
+                                <span>
+                                    <i class="{{ item['icon'] }}"></i> {{ item['name'] }}
+                                </span>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- Contact link -->
+                <a href="{{ header.contact_link.url }}">
+                    <i class="{{ header.contact_link.icon }}"></i>
+                    {{ header.contact_link.name }}
+                </a>
+
+            </nav>
+        </header>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector("nav");
+            nav.classList.toggle("show");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLinks = document.querySelectorAll(".nav-item > a");
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const parent = this.parentElement;
+
+                        // If already open, close it
+                        if (parent.classList.contains("open")) {
+                            parent.classList.remove("open");
+                        } else {
+                            // Close all first
+                            document.querySelectorAll(".nav-item").forEach(item => {
+                                item.classList.remove("open");
+                            });
+                            parent.classList.add("open");
+                        }
+                    }
+                });
+            });
+
+            // Optional: close dropdown when clicking outside nav
+            document.addEventListener("click", function (e) {
+                if (window.innerWidth <= 768) {
+                    const nav = document.querySelector("nav");
+                    const isClickInsideNav = nav.contains(e.target);
+                    const isMenuButton = e.target.closest(".menu-toggle");
+
+                    if (!isClickInsideNav && !isMenuButton) {
+                        nav.classList.remove("show");
+                        document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("open"));
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>

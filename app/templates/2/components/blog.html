@@ -1,0 +1,21 @@
+<section id="blog" class="blog-section">
+    <div class="container">
+        <h2 class="section-title1">{{ blog_section.title }}</h2>
+        <p class="subtitle">{{ blog_section.subtitle }}</p>
+
+        <div class="blog-grid">
+            {% for blog in blog_section["items"] %}
+            <div class="blog-card">
+                <div class="blog-date">
+                    <span class="day">{{ blog.day }}</span>
+                    <span class="month">{{ blog.month }}</span>
+                </div>
+                <img src="{{ blog.image }}" alt="{{ blog.alt }}">
+                <h3>{{ blog.heading }}</h3>
+                <p>{{ blog.description }}</p>
+                <a href="{{ blog.link }}" class="read-more">Read More</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

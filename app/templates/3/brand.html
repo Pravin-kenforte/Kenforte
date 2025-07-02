@@ -1,0 +1,35 @@
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<section class="customers-section">
+    <div class="container">
+        <h2 class="customers-title">
+            {{ customers_section.title }}
+        </h2>
+        <div class="swiper customerSwiper">
+            <div class="swiper-wrapper">
+                {% for customer in customers_section.customers %}
+                <div class="swiper-slide">
+                    <img src="{{ customer.img_src }}" alt="{{ customer.alt }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper(".customerSwiper", {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        speed: 1000,
+    });
+</script>

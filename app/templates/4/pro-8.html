@@ -1,0 +1,44 @@
+{% extends "includes/base.html" %}
+{% block content %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles/styles4.css') }}" rel="stylesheet">
+</head>
+{% include "4/components/header.html" %}
+
+<body class="pro-8-body">
+    <section class="pro-3-section">
+        <div class="pro-8-container">
+            <div class="pro-8-content">
+                <a href="{{ uniform_collection.back_link }}" class="pro-3-back">
+                    {{ uniform_collection.back_text }}
+                </a>
+
+                <h4 class="pro-8-subtitle">{{ uniform_collection.subtitle }}</h4>
+                <h1 class="pro-8-title">
+                    {{ uniform_collection.title | safe }}
+                </h1>
+
+                <div class="pro-8-image-column">
+                    {% for look in uniform_collection.looks %}
+                    <a href="{{ look.link }}" class="pro-8-image-block">
+                        <img src="{{ look.image.src }}" alt="{{ look.image.alt }}" class="pro-8-image">
+                        <p class="pro-8-caption">{{ look.caption }}</p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stay-in-touch">
+        <div class="contact-box">
+            <p>{{ how_we_work_home.stay_in_touch_text }}</p>
+        </div>
+    </section>
+</body>
+
+</html>
+
+{% include "4/components/footer.html" %}
+{% endblock %}

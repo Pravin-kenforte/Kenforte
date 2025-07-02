@@ -1,0 +1,35 @@
+{% extends "includes/base.html" %}
+
+{% block content %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+</head>
+
+
+{% include "1/components/header.html" %}
+{% include "1/hero.html" %}
+{% include "1/features.html" %}
+{% include "1/components/footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+            dots[i].classList.toggle('active', i === index);
+        });
+        currentSlide = index;
+    }
+
+    setInterval(() => {
+        let next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }, 8000);
+</script>
+{% endblock %}

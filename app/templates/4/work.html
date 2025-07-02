@@ -1,0 +1,145 @@
+{% extends "includes/base.html" %}
+{% block content %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles/styles4.css') }}" rel="stylesheet">
+</head>
+{% include "4/components/header.html" %}
+
+<div class="circle-container">
+    <a href="{{ how_we_work_pro.back_link }}" class="pro-3-back">
+        {{ how_we_work_pro.back_text }}
+    </a>
+    <h1>{{ how_we_work_pro.title }}</h1>
+    <p class="top-text">{{ how_we_work_pro.intro_text | safe }}</p>
+</div>
+
+<div class="circle">
+    {% for step in how_we_work_pro.steps %}
+    <div class="icon" data-title="{{ step.title }}" data-description="{{ step.description }}">
+        <img src="{{ step.image }}" alt="{{ step.title }}">
+    </div>
+    {% endfor %}
+
+    <div class="center-content">
+        <h2 id="step-title">{{ how_we_work_pro.default_step.title }}</h2>
+        <p id="step-description">{{ how_we_work_pro.default_step.description }}</p>
+    </div>
+</div>
+
+<section class="features-section">
+    <h2>{{ how_we_work_pro.features_title }}</h2>
+    <div class="features-grid">
+        {% for group in how_we_work_pro.features %}
+        <div class="feature-group">
+            {% for feature in group %}
+            <div class="feature-item">
+                <img src="{{ feature.icon }}" alt="{{ feature.title }} Icon" />
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="partner-section">
+    <h2>{{ how_we_work_pro.partner_title }}</h2>
+
+    <form class="partner-form">
+        <div class="form-row two-col">
+            <div class="form-group">
+                <label for="firstName">Name <span>*</span></label>
+                <div class="name-fields">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label>I am a <span>*</span></label>
+            <div class="radio-group">
+                <label><input type="radio" name="role" required> School Correspondent / School Director</label>
+                <label><input type="radio" name="role"> School Principal</label>
+                <label><input type="radio" name="role"> School Administrator / Purchase Manager</label>
+            </div>
+        </div>
+
+        <div class="form-row two-col">
+            <div class="form-group">
+                <label>School Name <span>*</span></label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Email <span>*</span></label>
+                <input type="email" required>
+            </div>
+        </div>
+
+        <div class="form-row two-col">
+            <div class="form-group">
+                <label>School Website Address <span>*</span></label>
+                <input type="url" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number <span>*</span></label>
+                <input type="tel" required>
+            </div>
+        </div>
+
+        <div class="form-row two-col">
+            <div class="form-group">
+                <label>City & State <span>*</span></label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>School Student Enrollment (all grades & genders) <span>*</span></label>
+                <input type="number" placeholder="Ex:300" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <button type="submit" class="submit-btn">SUBMIT</button>
+        </div>
+    </form>
+</section>
+
+<script>
+    const icons = document.querySelectorAll('.icon');
+    const title = document.getElementById('step-title');
+    const description = document.getElementById('step-description');
+
+    icons.forEach(icon => {
+        icon.addEventListener('mouseover', () => {
+            icons.forEach(i => i.classList.remove('active'));
+            icon.classList.add('active');
+            title.textContent = icon.getAttribute('data-title');
+            description.textContent = icon.getAttribute('data-description');
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const icons = document.querySelectorAll(".circle .icon");
+        const radius = 220;
+        const total = icons.length;
+
+        icons.forEach((icon, i) => {
+            const angle = (i / total) * 2 * Math.PI;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+
+            icon.style.setProperty('--x', `${x}px`);
+            icon.style.setProperty('--y', `${y}px`);
+
+            setTimeout(() => {
+                icon.classList.add("animate-in");
+            }, i * 250);
+        });
+    });
+</script>
+
+{% include "4/components/footer.html" %}
+{% endblock %}

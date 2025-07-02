@@ -1,0 +1,16 @@
+<section id="service" class="service-section">
+    <h2 class="section-title">{{ services_section.section_title }}</h2>
+    <p class="section-subtitle">{{ services_section.section_subtitle }}</p>
+
+    <div class="service-container">
+        {% for service in services_section["items"] %}
+        <div class="service-boxes">
+            <div class="icon">
+                <i class="{{ service.icon }}"></i>
+            </div>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>

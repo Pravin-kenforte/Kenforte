@@ -1,0 +1,58 @@
+<section class="stats-section">
+    <div class="stats-container">
+        <div class="stat-box red">
+            <h2 class="counter" data-target="2727">1000</h2>
+            <p>Graphics Design</p>
+        </div>
+        <div class="stat-box white">
+            <h2 class="counter" data-target="3635">1000</h2>
+            <p>Website Created</p>
+        </div>
+        <div class="stat-box red">
+            <h2 class="counter" data-target="2120">1000</h2>
+            <p>Coffee Taken</p>
+        </div>
+        <div class="stat-box white">
+            <h2 class="counter" data-target="4338">1000</h2>
+            <p>Photo Taken</p>
+        </div>
+    </div>
+</section>
+<script>
+    const counters = document.querySelectorAll('.counter');
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        let count = 1000;
+        counter.innerText = count;
+
+        const updateCount = () => {
+            const increment = Math.ceil((target - count) / 10);
+            if (count < target) {
+                count += increment;
+                counter.innerText = count;
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    };
+
+    // Observer to detect when counters come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animate all counters
+                counters.forEach(counter => animateCounter(counter));
+            }
+        });
+    }, {
+        threshold: 0.5  // Adjust based on when you want the animation to trigger
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+</script>

@@ -1,0 +1,280 @@
+<header class="edu-header header-style-4 header-fullwidth no-topbar">
+
+    <script type="75327fa22f54f620f4a3c943-text/javascript">
+        window.onload = function() {
+            var popup = document.getElementById("popup");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            popup.style.display = "block";
+
+            closeBtn.onclick = function() {
+                popup.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            }
+        }
+    </script>
+    <div id="edu-sticky-placeholder"></div>
+
+    <div class="header-mainmenu">
+
+        <div class="container-fluid">
+
+            <div class="header-navbar">
+
+                <div class="header-brand">
+
+                    <div class="logo">
+
+                        <a href="/home">
+
+                            <img class="logo-light" src="/static/images/logo_5web.png" alt="Corporate Logo" height="80"
+                                width="180">
+
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="header-mainnav">
+
+                    <nav class="mainmenu-nav">
+
+                        <ul class="mainmenu">
+
+                            <li><a href="/home">Home</a>
+
+
+
+                            </li>
+
+                            <li class="has-droupdown"><a href="#">About</a>
+
+                                <ul class="submenu">
+
+                                    <li><a href="/sh">School History</a></li>
+
+                                    <li><a href="/management">Management</a></li>
+
+                                    <li><a href="/inf">Infrastructure</a></li>
+
+                                    <li><a href="/teach">Academic</a></li>
+
+                                    <li><a href="{{ url_for('static', filename='SARAS-CBSE-1.pdf') }}"
+                                            target="_blank">Mandatory Disclosure</a></li>
+
+
+
+                                </ul>
+
+                            </li>
+
+
+
+                            <li><a href="/achive">Achivement</a>
+
+
+
+                            </li>
+
+                            <li><a href="/adm">Admission</a>
+
+
+
+                            </li>
+
+                            <li><a href="/gallery">Gallery</a>
+
+
+
+                            </li>
+
+                            <li><a href="/news">Activity</a>
+
+
+
+                            </li>
+
+                            <li><a href="/contact">Contact</a></li>
+
+
+
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+
+
+                <div class="header-right">
+
+                    <ul class="header-action">
+
+
+
+                        <li class="mobile-menu-bar d-block d-xl-none">
+
+                            <button class="hamberger-button">
+
+                                <i class="icon-54"></i>
+
+                            </button>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="popup-mobile-menu">
+
+        <div class="inner">
+
+            <div class="header-top">
+
+                <div class="logo">
+
+                    <a href="index-2.html">
+
+                        <img class="logo-light" src="/static/images/logo_5web.png" alt="Corporate Logo">
+
+                        <img class="logo-dark" src="/static/images/logo_5web.png" alt="Corporate Logo">
+
+                    </a>
+
+                </div>
+
+                <div class="close-menu">
+
+                    <button class="close-button">
+
+                        <i class="icon-73"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <ul class="mainmenu">
+
+
+
+
+
+                <li><a href="/home">Home</a>
+
+
+
+                </li>
+
+                <li class="has-droupdown"><a href="#">About</a>
+
+                    <ul class="submenu">
+
+                        <li><a href="sh">School History</a></li>
+
+                        <li><a href="/management">Management</a></li>
+
+                        <li><a href="/inf">Infrastructure</a></li>
+
+                        <li><a href="/teach">Academic</a></li>
+
+                        <li><a href="{{ url_for('static', filename='SARAS-CBSE-1.pdf') }}" target="_blank">Mandatory
+                                Disclosure</a></li>
+
+                    </ul>
+
+                </li>
+
+
+
+                <li><a href="/achive">Achivement</a>
+
+
+
+                </li>
+
+
+
+                <li><a href="/gallery">Gallery</a>
+
+
+
+                </li>
+
+                <li><a href="/news">Activity</a>
+
+
+
+                </li>
+
+                <li><a href="/contact">Contact</a>
+
+
+
+                </li>
+
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Start Search Popup  -->
+
+    <div class="edu-search-popup">
+
+        <div class="content-wrap">
+
+            <div class="site-logo">
+
+                <img class="logo-light" src="/static/images/logo_5web.png" alt="Corporate Logo">
+
+                <img class="logo-dark" src="/static/images/logo_5web.png" alt="Corporate Logo">
+
+            </div>
+
+            <div class="close-button">
+
+                <button class="close-trigger"><i class="icon-73"></i></button>
+
+            </div>
+
+            <div class="inner">
+
+                <form class="search-form" action="#">
+
+                    <input type="text" class="edublink-search-popup-field" placeholder="Search Here...">
+
+                    <button class="submit-button"><i class="icon-2"></i></button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End Search Popup  -->
+
+</header>

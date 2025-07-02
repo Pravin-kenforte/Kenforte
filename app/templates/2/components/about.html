@@ -1,0 +1,19 @@
+<section id="about" class="about-section">
+    <div class="about-left">
+        <div class="red-bg"></div>
+        <img src="{{ url_for('static', filename=about.image) }}" alt="{{ about.image_alt }}" class="profile-img">
+    </div>
+    <div class="about-right">
+        <h1>{{ about.intro_heading }}</h1>
+        <h3>{{ about.intro_subheading }}</h3>
+        <p>{{ about.description | safe }}</p>
+        <div class="services">
+            {% for service in about.services %}
+            <div class="service-box {{ service.style }}">
+                <i class="{{ service.icon }}"></i>
+                {{ service.name }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,69 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>About Us</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>About Us</span>
+            </p>
+        </div>
+    </section>
+
+    <section id="about" class="why-choose-us">
+        <p class="section-subtitle">Services and Experience</p>
+        <h2 class="section-title">Why Choose Us?</h2>
+
+        <div class="grid-container">
+            <div class="grid-item red">
+                <div class="icon">⭐</div>
+                <h3>Integrity</h3>
+                <p>We are real to our commitments</p>
+            </div>
+            <div class="grid-item yellow">
+                <div class="icon">⭐</div>
+                <h3>Quality</h3>
+                <p>What we do, we do well</p>
+            </div>
+            <div class="grid-item center black">
+                <h3>Since 1992</h3>
+                <p>Mascot Group of company’s Milestones</p>
+                <ul>
+                    <li>1992 – Measuring Instruments</li>
+                    <li>1999 – CNC Tools</li>
+                    <li>2008 Godrej MHE</li>
+                    <li>2011 – Ahmedabad (Jay Techno) Office</li>
+                    <li>2015 – Jamnagar (Mascot Tooling) Office</li>
+                    <li>2016 – Ahmedabad (Mascot Techno) Office</li>
+                    <li>2016 CMM LAB</li>
+                    <li>2018 Industry 4.0 IIOT</li>
+                    <li>2020 Automation</li>
+                </ul>
+            </div>
+            <div class="grid-item yellow">
+                <div class="icon">⭐</div>
+                <h3>Respect</h3>
+                <p>We acknowledge, value differences, and achieve leadership through teamwork.</p>
+            </div>
+            <div class="grid-item red">
+                <div class="icon">⭐</div>
+                <h3>Customer Focus</h3>
+                <p>We deliver what the customer needs in terms of value, quality and satisfaction.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+{% include "3/components/footer.html" %}
+{% endblock %}

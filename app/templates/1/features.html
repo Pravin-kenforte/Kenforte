@@ -1,0 +1,61 @@
+{% extends "includes/base.html" %}
+{% block content %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<section class="features-wrapper">
+    <div class="features-main">
+        <h1>Secure bitcoin processing infrastructure for your business</h1>
+        <div class="cards">
+            {% if features %}
+            {% for key, feature in features.items() %}
+            <div class="card" data-aos="fade" data-aos-delay="{{ loop.index0 * 300 }}" data-aos-duration="1000">
+                <img src="{{ url_for('static', filename=feature.image) }}" alt="{{ key }}">
+                <h2>{{ feature.amount }}</h2>
+                <div class="card-detail">
+                    <p><strong>Transfer:</strong></p>
+                    {% for t in feature.transfer %}
+                    <p>{{ t }}</p>
+                    {% endfor %}
+                    <p><strong>Exchange:</strong></p>
+                    {% for e in feature.exchange %}
+                    <p>{{ e }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+    <aside class="features-sidebar">
+        {% if sidebar %}
+        {% for key, section in sidebar.items() %}
+        <div class="feature-section {% if section.active %}active{% endif %}">
+            <h3>{{ section.title }}</h3>
+            {% if section.description %}
+            <p>{{ section.description }}</p>
+            {% endif %}
+            {% if section.link %}
+            <a href="#">{{ section.link }}</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </aside>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        useClassNames: true,
+        initClassName: false,
+        animatedClassName: 'aos-animate',
+        once: true,
+        offset: 200,
+    });
+</script>
+{% endblock %}

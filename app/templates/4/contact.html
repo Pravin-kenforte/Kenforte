@@ -1,0 +1,53 @@
+{% extends "includes/base.html" %}
+{% block content %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles/styles4.css') }}" rel="stylesheet">
+</head>
+
+{% include "4/components/header.html" %}
+
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-left">
+            <a href="{{ contact.back_link }}" class="pro-3-back">← Back</a>
+
+            <h2>{{ contact.heading | safe }}</h2>
+
+            <p><strong>Address:</strong> <span>{{ contact.address }}</span></p>
+            <p><strong>Sales:</strong> {{ contact.sales_email }}</p>
+            <p><strong>Help:</strong> {{ contact.support_email }}</p>
+
+            <div class="partner-button">
+                <span>{{ contact.partner_cta }}</span>
+                <button class="click-btn">{{ contact.partner_button_text }}</button>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form>
+                <label for="name">{{ contact.form_fields.name }} <span class="required">*</span></label>
+                <input type="text" id="name" required>
+
+                <label for="email">{{ contact.form_fields.email }} <span class="required">*</span></label>
+                <input type="email" id="email" required>
+
+                <label for="subject">{{ contact.form_fields.subject }} <span class="required">*</span></label>
+                <input type="text" id="subject" required>
+
+                <label for="message">{{ contact.form_fields.message }} <span class="required">*</span></label>
+                <textarea id="message" rows="5" required></textarea>
+
+                <button type="submit" class="submit-btn">{{ contact.submit_button }}</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="map-container">
+    <iframe src="{{ contact.map_url }}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+{% include "4/components/footer.html" %}
+{% endblock %}

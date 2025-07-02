@@ -1,0 +1,157 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inspection Equipment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Inspection Equipment</h1>
+            <p class="breadcrumb">
+                <a href="">Home</a> &nbsp;›&nbsp; <span>Inspection Equipment</span>
+            </p>
+        </div>
+    </section>
+    <section class="inspection-section">
+        <div class="container">
+            <p class="section-label">Products</p>
+            <h1 class="main-heading">Inspection Equipment</h1>
+            <p class="description">
+                Mascot CNC is a distributor of the best quality Inspection Equipment. Compliance and quality are
+                everything in the manufacturing industry. Human inspection is not completely reliable and has a greater
+                scope for error. The complex procedure requires more explicit inspection that can be achieved through
+                Inspection Equipment.
+            </p>
+            <p class="description">
+                We are the distributor of Inspection Equipment from the most trusted manufacturers including Luthra
+                Precision Equipment, Armatech, and Baker Gauges.
+            </p>
+            <p class="description">
+                We provide a range of inspection equipment of the highest precision and quality. We keep in mind the
+                specific functionality and operation of your company and suggest to you the inspection equipment that is
+                just right for your needs.
+            </p>
+            <p class="description">
+                The range of Inspection Equipment includes
+                <span class="red-link">Surface Plate</span>,
+                <span class="red-link">Comparator Stand</span>,
+                <span class="red-link">Bench Center</span>,
+                <span class="red-link">Angle Plate</span>,
+                <span class="red-link">V Block</span>,
+                <span class="red-link">Dial Magnetic Stand</span>, and
+                <span class="red-link">Portable Surface Roughness Tester</span>.
+            </p>
+        </div>
+    </section>
+    <section class="material-section">
+        <h2 class="material-heading">Inspection Equipments</h2>
+        <div class="material-container">
+            <div class="material-card">
+                <img src="/static/images/ins-1.jpg" alt="Forklift" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Surface Plate</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Surface Plate</h4>
+                    <a href="micrometer.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/ins-2.jpg" alt="vernier" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Comparator Stand</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Comparator Stand</h4>
+                    <a href="stacker.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/ins-3.jpeg" alt="height_gauge" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Bench Centre</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Bench Centre</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/ins-4.jpg" alt="dial_gauge" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Angle Plate</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Angle Plate</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/ins-5.png" alt="double" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Magnetic 'V' Blocks</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Magnetic 'V' Blocks</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/ins-6.jpg" alt="double" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Dial Magnetic Stand</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Dial Magnetic Stand</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/ins-7.jpg" alt="double" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Portable Surface <br>Roughness Tester</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Portable Surface <br>Roughness Tester</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/ins-8.jpg" alt="double" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Micrometer Stand</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Micrometer Stand</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    {% include "3/components/footer.html" %}
+    {% endblock %}

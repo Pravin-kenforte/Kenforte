@@ -1,0 +1,120 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Material Handling / storage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Material Handling / storage</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>Material Handling / storage</span>
+            </p>
+        </div>
+    </section>
+    <section class="material-section">
+        <div class="material-heading">
+            <h3>Products</h3>
+            <h1>Material Handling / Storage</h1>
+        </div>
+
+        <div class="material-description">
+            <p>
+                Mascot CNC is the leading distributor and official partner for
+                <strong>Godrej Material Handling Equipment</strong> in Gujarat. We supply various Material Handling
+                Equipment,
+                including <span class="highlight">Forklifts, Stackers, Mobi Stack equipment, Hand/ Power Pallet
+                    Truck</span>,
+                and <span class="highlight">Pallet Racking Systems</span>.
+            </p>
+            <p>
+                We conduct a lot of business with many Industrial and commercial companies in Gujarat.
+                <strong>Godrej Material Handling Equipment</strong> is top-notch in quality and suits a variety of
+                needs.
+            </p>
+            <p>
+                Our well-trained sales and service staff is knowledgeable and will give you the right recommendation
+                that suits
+                your needs. Our engineers will help you find the accurate solution to fit your budget and be efficient
+                to increase
+                productivity and solve your Material Handling Needs.
+            </p>
+        </div>
+    </section>
+    <section class="material-section">
+        <h2 class="material-heading">Material Handling / Storage</h2>
+        <div class="material-container">
+            <div class="material-card">
+                <img src="/static/images/forklift.jpg" alt="Forklift" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Forklift</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Forklift</h4>
+                    <a href="forklift.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/mac2.jpg" alt="Stacker" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Stacker</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Stacker</h4>
+                    <a href="stacker.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/mac3.jpg" alt="Hand/Power Pallet Truck" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Hand / Power Pallet Truck</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Hand / Power Pallet Truck</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/mac4.jpg" alt="Hand/Power Pallet Truck" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Pallet Racking System</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Pallet Racking System</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/mac5.jpg" alt="Hand/Power Pallet Truck" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Mobi Stack System</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Mobi Stack System</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    {% include "3/components/footer.html" %}
+    {% endblock %}

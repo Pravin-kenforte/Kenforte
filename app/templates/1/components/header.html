@@ -1,0 +1,21 @@
+<header class="site-header">
+    {% if header %}
+    <div class="header-container">
+        <div class="logo">{{ header.logo }}</div>
+        <div class="right-group">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+        {% for link in header.nav_links %}
+        <a href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+    </nav>
+    {% endif %}
+</header>
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+</script>

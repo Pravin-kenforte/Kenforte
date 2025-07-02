@@ -1,0 +1,45 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Testimonials</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>Testimonials</span>
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <section class="testimonials-section">
+        <p class="section-subtitle">What our customer says</p>
+        <h2 class="section-title">Testimonials</h2>
+
+        <div class="testimonial-card">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">
+                Mascot Get a good service and good response for his customer with quick answer and on time delivery
+                thanks
+            </p>
+            <div class="testimonial-pointer"></div>
+        </div>
+
+        <div class="testimonial-author">
+            <strong>JAYESH DALSANIYA</strong><br>
+            <span>Shaildeep Industries Rajkot</span>
+        </div>
+    </section>
+</body>
+
+{% include "3/components/footer.html" %}
+{% endblock %}

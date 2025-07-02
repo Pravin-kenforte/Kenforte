@@ -1,0 +1,47 @@
+<footer class="footer">
+    <div class="footer-note">
+        {{ footer.footer_note }}
+    </div>
+    <div class="footer-content">
+        <div class="footer-column about">
+            <p>
+                {{ footer.about.text }}
+                <span class="readmore">{{ footer.about.read_more }}</span>
+            </p>
+            <div class="social-icons">
+                {% for icon in footer.about.social_icons %}
+                <i class="{{ icon }}"></i>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Our Services</h3>
+            <ul>
+                {% for service in footer.services %}
+                <li>{{ service }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+
+        <div class="footer-column recent-posts">
+            <h3>Recent Posts</h3>
+            {% for post in footer.recent_posts %}
+            <div class="post">
+                <img src="{{ post.img_src }}" alt="{{ post.alt }}">
+                <div>
+                    <p>{{ post.title }}</p>
+                    <span><i class="{{ post.icon_class }}"></i> {{ post.date }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>{{ footer.footer_bottom.copyright | safe }}</p>
+        <p>{{ footer.footer_bottom.credits | safe }}</p>
+    </div>
+</footer>

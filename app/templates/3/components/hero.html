@@ -1,0 +1,37 @@
+<section class="hero-section hero-bg">
+    <div class="overlay">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>{{ hero_section.heading | safe }}</h1>
+                <p>{{ hero_section.paragraph }}</p>
+                <a href="{{ hero_section.button_link }}" class="hero-btn">
+                    {{ hero_section.button_text }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works-section">
+    <div class="how-it-works-container">
+        <h2>How It Works</h2>
+        <div class="steps-wrapper">
+            <div class="step">
+                <img src="/static/images/offer.png" alt="Select Product">
+                <p>Select Product</p>
+            </div>
+            <div class="arrow">➝</div>
+            <div class="step">
+                <img src="/static/images/negotiation.png" alt="Make Inquiry">
+                <p>
+                    <a href="/contact_us_4" class="inquiry-button">Make An Inquiry</a>
+                </p>
+            </div>
+
+            <div class="arrow">➝</div>
+            <div class="step">
+                <img src="/static/images/contract.png" alt="Contact">
+                <p>Kenforte will Contact you soon</p>
+            </div>
+        </div>
+    </div>
+</section>

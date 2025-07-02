@@ -1,0 +1,32 @@
+<footer class="footer">
+
+    <div class="footer-top">
+        <div class="footer-logo">
+            <img src="{{ footer.logo }}" alt="Prepster Logo" />
+        </div>
+
+        <div class="footer-info">
+            <h3>{{ footer.info_title }}</h3>
+            <ul>
+                {% for link in footer.info_links %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="footer-office">
+            <h3>{{ footer.office_title }}</h3>
+            <p><strong>Address:</strong> {{ footer.address | safe }}</p>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="footer-bottom">
+        <p>{{ footer.connect_text }} &nbsp;&nbsp; <strong>{{ footer.social_links }}</strong></p>
+        <p class="copyright">{{ footer.copyright }}</p>
+
+    </div>
+</footer>

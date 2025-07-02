@@ -1,0 +1,13 @@
+{% for section in hero_sections %}
+<section class="{{ section.class }}" style="background: url('{{ section.background }}') no-repeat center center/cover;">
+    <div class="overlay">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>{{ section.heading | safe }}</h1>
+                <p>{{ section.paragraph }}</p>
+                <a href="{{ section.button_link }}" class="hero-btn">{{ section.button_text }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}

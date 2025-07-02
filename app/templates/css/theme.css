@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --button-color: #e9b200;
+    --font-family: 'Arial, sans-serif';
+
+    /* Backgrounds */
+    --bg-header: #ffffff;
+    --bg-body: #ffffff;
+    --bg-section: #f5f5f5;
+    --bg-hero-overlay: rgba(255, 255, 255, 0.7);
+    --bg-card: #ffffff;
+
+    /* Text colors */
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --text-link-hover: #e9b200;
+
+    /* Form and borders */
+    --form-bg: #fff;
+    --form-border: #ccc;
+}
+
+/* DARK MODE OVERRIDES */
+body.dark-mode {
+    --primary-color: #121212;
+    --secondary-color: #ffffff;
+    --button-color: #e9b200;
+    --bg-header: #1a1a1a;
+    --bg-body: #121212;
+    --bg-section: #1e1e1e;
+    --bg-hero-overlay: rgba(0, 0, 0, 0.7);
+    --bg-card: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-link-hover: #e9b200;
+    --form-bg: #111;
+    --form-border: #e9b200;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
+
+/* Header and Navigation */
+header,
+.site-header,
+nav {
+    background-color: var(--bg-header);
+    color: var(--text-primary);
+}
+
+.logo,
+nav a {
+    color: var(--text-primary);
+}
+
+nav a:hover {
+    color: var(--text-link-hover);
+}
+
+/* Hero Section */
+.hero::before {
+    background-color: var(--bg-hero-overlay);
+}
+
+.hero h1,
+.hero p {
+    color: var(--text-primary);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--bg-section);
+    color: var(--text-primary);
+}
+
+.about-right h3,
+.about-right p {
+    color: var(--text-secondary);
+}
+
+/* Service Boxes */
+.service-box.light,
+.service-boxes {
+    background-color: var(--bg-section);
+    color: var(--text-primary);
+    border-color: var(--button-color);
+}
+
+/* Passion/Carousel */
+.carousel-section {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+}
+
+.passion-box {
+    background-color: #222;
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+}
+
+.blog-card {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.blog-card p {
+    color: var(--text-secondary);
+}
+
+/* Read More Button */
+.read-more {
+    background-color: transparent;
+    color: var(--button-color);
+    border: 1px solid var(--button-color);
+}
+
+.read-more:hover {
+    background-color: var(--button-color);
+    color: #ffffff;
+}
+
+/* Contact Section */
+.contact-section,
+.contact-container {
+    background-color: #0a0a0a;
+    color: var(--text-primary);
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    background-color: var(--form-bg);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--form-border);
+}
+
+.contact-info p,
+.info-item p {
+    color: var(--text-secondary);
+}
+
+/* Services Page Containers */
+.service-section,
+.services,
+.service-wrapper,
+.service-container {
+    background-color: var(--bg-section);
+    color: var(--text-primary);
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

@@ -1,0 +1,274 @@
+{% extends "includes/base.html" %}
+
+{% block header %}
+{% include '5/components/header.html' %}
+{% endblock %}
+
+{% block content %}
+<div id="edublink-preloader">
+    <div class="loading-spinner">
+        <div class="preloader-spin-1"></div>
+        <div class="preloader-spin-2"></div>
+    </div>
+    <div class="preloader-close-btn-wraper">
+        <span class="btn btn-primary preloader-close-btn">
+            Cancel Preloader</span>
+    </div>
+</div>
+
+<div id="main-wrapper" class="main-wrapper">
+
+    <!--=====================================-->
+    <!--=        Header Area Start       	=-->
+    <!--=====================================-->
+
+    <!--=====================================-->
+    <!--=       Breadcrumb Area Start      =-->
+    <!--=====================================-->
+
+
+    <div class="edu-breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-inner">
+                <div class="page-title">
+                    <h1 class="title">Admission Process</h1>
+                </div>
+
+            </div>
+        </div>
+        <ul class="shape-group">
+            <li class="shape-1">
+                <span></span>
+            </li>
+            <li class="shape-2 scene"><img data-depth="2" src="/static/images/shape-13.png" alt="shape"></li>
+            <li class="shape-3 scene"><img data-depth="-2" src="/static/images/shape-15.png" alt="shape"></li>
+            <li class="shape-4">
+                <span></span>
+            </li>
+            <li class="shape-5 scene"><img data-depth="2" src="/static/images/shape-07.png" alt="shape"></li>
+        </ul>
+    </div>
+
+    <!--=====================================-->
+    <!--=        FAQ Area Start            =-->
+    <!--=====================================-->
+    <section class="edu-section-gap faq-page-area">
+        <div class="container">
+            <div class="row">
+                <img src="/static/images/hat25.jpg" height="800" width="600">
+                <img src="/static/images/hat25a.jpg">
+                <div class="col-lg-4">
+                    <div class="faq-page-nav">
+                        <h3 class="title">Admission Process</h3>
+                        <p><b>Applications for the Talent Search Exam (TSE-2025)
+                                will be issued from 20.01.2025 (Monday).</b></p>
+
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content faq-page-tab-content" id="faq-accordion">
+                        <div class="tab-pane fade show active" id="gn-ques" role="tabpanel">
+                            <div class="faq-accordion">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#question-1" aria-expanded="true">
+                                                PRIMARY (I std. to V std. )
+                                            </button>
+                                        </h5>
+                                        <div id="question-1" class="accordion-collapse collapse show"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <p>In primary level, Admission can be done for I to V std.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#question-2"
+                                                aria-expanded="false">
+                                                SECONDARY (VI std. to X std. )
+                                            </button>
+                                        </h5>
+                                        <div id="question-2" class="accordion-collapse collapse"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <p>Admission can be done for classes VI to IX based on Talent Search
+                                                    Exam / Year long performance in the previous standard.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#question-3"
+                                                aria-expanded="false">
+                                                SENIOR SECONDARY (XI and XII)
+                                            </button>
+                                        </h5>
+                                        <div id="question-3" class="accordion-collapse collapse"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <p>Admission for std XI (CBSE) is based on Class X Board marks /
+                                                    Talent Search Exam (TSE) Marks.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#question-4"
+                                                aria-expanded="false">
+                                                HOSTEL FACILITY
+                                            </button>
+                                        </h5>
+                                        <div id="question-4" class="accordion-collapse collapse"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <p> 1.Hostel facility is available only for XI std CBSE
+                                                    <strong>Boys</strong> (200 students).<br />
+                                                    2.Hostel admission for CBSE <strong>Boys</strong> will be
+                                                    granted to the Top 200 students based on the
+                                                    marks scored in the Talent Search Examination - 2025.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#question-5"
+                                                aria-expanded="false">
+                                                GROUPS AVAILABLE FOR SENIOR SECONDARY
+                                            </button>
+                                        </h5>
+                                        <div id="question-5" class="accordion-collapse collapse"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <p> CBSE Groups Offered in Senior Secondary Classes
+
+                                                    Science Stream<br />
+
+                                                    English, Biology, Physics, Chemistry & Mathematics<br />
+
+                                                    English, Biology, Physics, Chemistry & Computer Science<br />
+
+                                                    English, Biology, Physics, Chemistry & Physical Education </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#question-6"
+                                                aria-expanded="false">
+                                                SCHOLARSHIPS DETAILS
+                                            </button>
+                                        </h5>
+                                        <div id="question-6" class="accordion-collapse collapse"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <img src="/static/images/a1.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#question-7"
+                                                aria-expanded="false">
+                                                INSTRUCTIONS FOR ADMISSION
+                                            </button>
+                                        </h5>
+                                        <div id="question-7" class="accordion-collapse collapse"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <img src="/static/images/INST.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h5 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#question-8"
+                                                aria-expanded="false">
+                                                TALENT SEARCH EXAMINATION – 2025(PATTERN AND SYLLABUS)
+                                            </button>
+                                        </h5>
+                                        <div id="question-8" class="accordion-collapse collapse"
+                                            data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <a href="assets/CLASS 6 - 9 TSE SYLLABUS.pdf">1.SYLLABUS FOR CLASS 6
+                                                    TO 9 & 11</a>
+                                                <BR />
+                                                <a href="assets/XI CBSE HAT-2025 INSTRUCTIONS.pdf">2.SYLLABUS FOR
+                                                    CLASS 11 HAT-2025</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--=====================================-->
+    <!--=        Footer Area Start          =-->
+    <!--=====================================-->
+    <!-- Start Footer Area  -->
+
+    <!-- End Footer Area  -->
+
+</div>
+
+<div class="rn-progress-parent">
+    <svg class="rn-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+
+<!-- JS
+	============================================ -->
+<!-- Modernizer JS -->
+<script src="/static/5/assets/js/modernizr.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<!-- Jquery Js -->
+<script src="/static/5/assets/js/jquery.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/bootstrap.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/sal.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/backtotop.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/magnifypopup.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/jquery.countdown.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/odometer.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/isotop.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/imageloaded.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/lightbox.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/paralax.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/paralax-scroll.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/jquery-ui.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/swiper-bundle.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/svg-inject.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/vivus.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/tipped.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/smooth-scroll.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/isInViewport.jquery.min.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+
+<!-- Site Scripts -->
+<script src="/static/5/assets/js/app.js" type="9fd21dd0833d0f74608326b7-text/javascript"></script>
+<script src="/static/5/assets/js/rocket-loader.min.js" data-cf-settings="9fd21dd0833d0f74608326b7-|49" defer></script>
+<script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'952119e359103d7f',t:'MTc1MDMxNTkyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+{% endblock %}
+
+{% block footer %}
+{% include '5/components/footer.html' %}
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gauges</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Gauges</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>Gauges</span>
+            </p>
+        </div>
+    </section>
+    <section class="inspection-section">
+        <div class="container">
+            <p class="section-label">Products</p>
+            <h1 class="main-heading">Gauges</h1>
+            <p class="description">
+                Mascot believes in providing maximum efficiency and precision to our customers. Therefore, we offer an
+                extensive range of high-precision and efficient gauges including <span class="red-link">Thread
+                    Gauge</span>,<span class="red-link">Taper Gauge,</span>
+                <span class="red-link">Plain Plug,</span>
+                <span class="red-link">Taper and Ring Gauge,and Adjustable/Fixed/Dial Snap Gauge.</span>.
+            </p>
+            <p class="description">
+                At Mascot, we ensure that our customers get the solutions tailor-made for their needs.
+            </p>
+            <p class="description">
+                You can get precise dimensional measurements with the dynamic range of Gauges we offer. Our explicit
+                Gauge range helps you to bring efficiency in measuring functions at your work unit.
+            </p>
+            <p>
+                Our engineers will help you in finding the right product that is suitable for your company, keeping in
+                mind the nature and scope of your operations.
+            </p>
+        </div>
+    </section>
+    <section class="material-section">
+        <h2 class="material-heading">Inspection Equipments</h2>
+        <div class="material-container">
+            <div class="material-card">
+                <img src="/static/images/ins-1.jpg" alt="Forklift" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Surface Plate</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Surface Plate</h4>
+                    <a href="micrometer.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/ins-2.jpg" alt="vernier" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Comparator Stand</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Comparator Stand</h4>
+                    <a href="stacker.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/ins-3.jpeg" alt="height_gauge" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Bench Centre</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Bench Centre</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/ins-4.jpg" alt="dial_gauge" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>Angle Plate</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>Angle Plate</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    {% include "3/components/footer.html" %}
+    {% endblock %}

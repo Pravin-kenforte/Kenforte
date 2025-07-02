@@ -1,0 +1,44 @@
+<section class="how-we-work-section">
+    <div class="how-we-work-container">
+        <div class="how-we-work-image">
+            <img src="{{ how_we_work_home.top_section.image }}" alt="Girl in uniform">
+        </div>
+        <div class="how-we-work-content">
+            <h2>{{ how_we_work_home.top_section.heading }}</h2>
+            <p>{{ how_we_work_home.top_section.paragraph }}</p>
+            <a href="/work" class="work-btn">Let's Drive in</a>
+
+        </div>
+    </div>
+
+    <section>
+        <div class="product">
+            {% for product in how_we_work_home.products %}
+            <a href="{{ product.link }}" class="product-card">
+                <img src="{{ product.image }}" alt="{{ product.title }}" />
+                <div class="hover-caption">
+                    <h2>{{ product.title }}</h2>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="how-we-work-container">
+        <div class="how-we-work-content">
+            <h2>{{ how_we_work_home.bottom_section.heading }}</h2>
+            <p>{{ how_we_work_home.bottom_section.paragraph }}</p>
+            <a href="/work" class="work-btn">Let's Drive in</a>
+
+        </div>
+        <div class="how-we-work-image">
+            <img src="{{ how_we_work_home.bottom_section.image }}" alt="Design ideology image">
+        </div>
+    </div>
+</section>
+
+<section class="stay-in-touch">
+    <div class="contact-box">
+        <p>{{ how_we_work_home.stay_in_touch_text }}</p>
+    </div>
+</section>

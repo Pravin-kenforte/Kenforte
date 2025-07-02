@@ -1,0 +1,67 @@
+{% extends "includes/base.html" %}
+{% block content %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles/styles4.css') }}" rel="stylesheet">
+</head>
+
+{% include "4/components/header.html" %}
+
+<section class="about-section">
+    <div class="container">
+        <div class="left-column">
+            <h4 class="subtitle">{{ about.subtitle }}</h4>
+            <h1 class="headline">{{ about.headline }}</h1>
+            <h3 class="highlight">{{ about.highlight | safe }}</h3>
+            <p class="description_1">{{ about.description_1 }}</p>
+        </div>
+        <div class="right-column">
+            <p class="description_2">{{ about.description_2 }}</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="accordion">
+        {% for item in about.accordion %}
+        <div class="accordion-item">
+            <button class="accordion-header">{{ item.title }}<span class="plus">+</span></button>
+            <div class="accordion-content">
+                <p>{{ item.content }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <section class="prepsterkids-section">
+        <div class="prepsterkids-container">
+            <div class="text-content">
+                <h1><span>#</span>{{ about.prepsterkids.heading | replace('#', '') }}</h1>
+                <p>{{ about.prepsterkids.description }}</p>
+            </div>
+            <div class="image-content">
+                <img src="{{ about.prepsterkids.image }}" alt="Smiling kid in dress" />
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const headers = document.querySelectorAll('.accordion-header:not(.disabled)');
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                headers.forEach(h => {
+                    if (h !== header) {
+                        h.classList.remove('active');
+                        h.nextElementSibling.style.display = 'none';
+                    }
+                });
+                const isOpen = header.classList.contains('active');
+                header.classList.toggle('active');
+                header.nextElementSibling.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+    </script>
+</section>
+
+{% include "4/components/footer.html" %}
+{% endblock %}

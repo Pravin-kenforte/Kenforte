@@ -1,0 +1,13 @@
+{%extends 'includes/base.html'%}
+{%block content%}
+
+<head>
+    <link href="{{ url_for('static', filename='styles/styles4.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('main.theme_css') }}">
+
+</head>
+{% include "4/components/header.html" %}
+{% include "4/hero.html" %}
+{% include "4/description.html"%}
+{% include "4/components/footer.html"%}
+{%endblock%}

@@ -1,0 +1,24 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "1/components/header.html" %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<section id="blog" class="blog-section">
+    <h2>{{ blog.heading }}</h2>
+    <div class="blog-cards">
+        {% for article in blog.articles %}
+        <div class="blog-card">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.alt }}">
+            </div>
+            <h3>{{ article.title }}</h3>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="{{ blog.link.url }}" class="read-blog-button">{{ blog.link.label }}</a>
+</section>
+{% include "1/components/footer.html" %}
+{% endblock %}

@@ -1,0 +1,1 @@
+TEMPLATE_INDEX_HTML_FILE_NAME = "__default_home__"

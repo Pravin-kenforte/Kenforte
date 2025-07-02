@@ -1,0 +1,24 @@
+<div class="hero">
+    <h2>{{ hero.title | safe }}</h2>
+    <div class="brand-name">
+        {% for letter in hero.brand_name %}
+        <span>{{ letter }}</span>
+        {% endfor %}
+    </div>
+    <div class="students">
+        <img src="{{ hero.student_image }}" alt="Students">
+    </div>
+</div>
+
+<div class="hero-section">
+    <div class="hero-description">
+        <p>{{ hero.description | safe }}</p>
+    </div>
+
+</div>
+
+<div>
+    <div class="hero-image-container">
+        <img src="{{ hero.hero_image }}" alt="Prepster Hero" class="hero-image">
+    </div>
+</div>

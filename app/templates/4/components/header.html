@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title if title else "Prepster" }}</title>
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img src="{{header.logo }}" alt="Prepster Logo" class="logo">
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+        </button>
+
+    </header>
+
+    <div class="menu-overlay" id="menu">
+        <div class="menu-content">
+            <span class="close-btn" onclick="toggleMenu()">{{ menu.close_button }}</span>
+            <ul>
+                {% for link in menu.nav_links %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <p class="connect">
+                {{ menu.connect_text }}<br>
+                <strong>
+                    {% for link in menu.social_links %}
+                    <a href="{{ link.url }}" target="_blank">{{ link.text }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </strong>
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>

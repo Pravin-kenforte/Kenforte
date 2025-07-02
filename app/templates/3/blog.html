@@ -1,0 +1,30 @@
+<section class="blog-section">
+    <div class="container">
+        <div class="section-header">
+            <p class="subtitle">{{ blog_section.subtitle }}</p>
+            <h2 class="title">{{ blog_section.title }}</h2>
+        </div>
+
+        <div class="blog-grid">
+            {% for blog in blog_section.blogs %}
+            <div class="blog-card">
+                <img src="{{ blog.img_src }}" alt="{{ blog.alt }}">
+                <div class="blog-content">
+                    <h3>{{ blog.heading }}</h3>
+                    <p class="category">
+                        Posted In <span class="{{ blog.category_class }}">{{ blog.category }}</span>
+                    </p>
+                    <p class="excerpt">{{ blog.excerpt | safe }}</p>
+                    <div class="read-more">{{ blog.read_more_symbol }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+            {% for page in blog_section.pagination %}
+            <a href="{{ page.link }}" class="{% if page.active %}active{% endif %}">{{ page.page }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

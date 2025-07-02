@@ -1,0 +1,52 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Metrology Lab & NABL Calibration LAB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Metrology Lab & NABL Calibration LAB</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>Metrology Lab & NABL Calibration LAB</span>
+            </p>
+        </div>
+    </section>
+
+
+    <section class="metrology-section">
+        <div class="container">
+            <div class="text-content">
+                <p class="tag">Services</p>
+                <h2 class="title">Metrology Lab & NABL Calibration LAB</h2>
+                <p class="desc">
+                    Mascot Metrology LAB caters to the needs of manufacturing companies in Gujarat and especially near
+                    Rajkot.
+                </p>
+                <p class="subheading">
+                    Here’s the list of metrology services we provide at our NABL certified Laboratory:
+                </p>
+                <ul class="service-list">
+                    <li>1) Third-party inspection/measurement</li>
+                    <li>2) NABL (National Accreditation Board for Testing and Calibration Laboratories) Calibration Lab
+                    </li>
+                    <li>3) Service Center for measurements instruments</li>
+                    <li>4) Resell / Trading of Engineering / Metrology Products / Gauges</li>
+                    <li>5) Calibration Software / customized software</li>
+                </ul>
+            </div>
+
+            <div class="image-content">
+                <img src="{{ url_for('static', filename='images/metrology.png') }}" alt="Metrology Image 1">
+                <img src="{{ url_for('static', filename='images/metrology1.png') }}" alt="Metrology Image 2">
+            </div>
+        </div>
+    </section>
+
+    {% include "3/components/footer.html" %}
+    {% endblock %}

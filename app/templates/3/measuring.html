@@ -1,0 +1,112 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Measuring Instruments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Measuring Instruments</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>Measuring Instruments</span>
+            </p>
+        </div>
+    </section>
+    <section class="material-section">
+        <div class="material-heading">
+            <h3>Products</h3>
+            <h1>Measuring Instruments</h1>
+        </div>
+
+        <div class="material-description">
+            <p>
+                Mascot CNC is a known distributor of measuring instruments. Every single inch matters while
+                manufacturing, therefore having high-precision in measurement is what every manufacturing company looks
+                for. To support the precise measurement, we supply a wide range of reliable and high-quality measuring
+                instruments.
+                <strong>Baker Gauges</strong> is the most renowned name in the manufacturing of measuring instruments.
+                We are the distributors of Baker Gauge measuring instruments in the Gujarat region. <span
+                    class="highlight">We recommend our customers the measuring instrument that best fits their needs. We
+                    believe in understanding the operations and make the right suggestions to provide the maximum
+                    benefits to our customers.The Measuring Instruments product range includes</span>,
+                and <span class="highlight">Micrometer, Vernier, Height Gauge, and Dial Gauge.
+
+                </span>.
+            </p>
+        </div>
+    </section>
+    <section class="material-section">
+        <h2 class="material-heading">Material Handling / Storage</h2>
+        <div class="material-container">
+            <div class="material-card">
+                <img src="/static/images/micrometer.png" alt="Forklift" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>micrometer</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>micrometer</h4>
+                    <a href="micrometer.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/vernier.png" alt="vernier" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>vernier</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>vernier</h4>
+                    <a href="stacker.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="/static/images/height_gauge.png" alt="height_gauge" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>height_gauge</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>height_gauge</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/dial_gauge.jpg" alt="dial_gauge" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>dial_gauge</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>dial_gaugem</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="/static/images/double.jpg" alt="double" />
+                <div class="material-info">
+                    <span class="plus">+</span>
+                    <h4>doubleColumn Digital Height Gauge</h4>
+                </div>
+                <div class="material-hover">
+                    <span class="plus">+</span>
+                    <h4>doubleColumn Digital Height Gauge</h4>
+                    <a href="pallet.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    {% include "3/components/footer.html" %}
+    {% endblock %}

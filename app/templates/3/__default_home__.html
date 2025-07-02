@@ -1,0 +1,16 @@
+{% extends "includes/base.html" %}
+{% block content %}
+
+<head>
+    <title>CNC Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles3.css') }}">
+    <link rel="stylesheet" href="{{ url_for('main.theme_css') }}">
+
+</head>
+{% include "3/components/header.html" %}
+{% include "3/components/hero.html" %}
+{% include "3/page1.html" %}
+{% include "3/brand.html" %}
+{% include "3/blog.html" %}
+{% include "3/components/footer.html" %}
+{% endblock %}

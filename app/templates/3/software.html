@@ -1,0 +1,78 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customized Software</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Customized Software</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>Customized Software</span>
+            </p>
+        </div>
+    </section>
+    <section class="software-page">
+        <h5 class="section-tag">Services</h5>
+        <h1 class="main-heading">Customized Software</h1>
+
+        <p class="description">
+            Mascot CNCs also provides customized Calibration Data Management Software called – <strong>CALITRACK
+                4</strong>.
+            <br><br>
+            <strong>CALITRACK 4</strong> software is suitable for calibration activities in Small and Medium-scale
+            Mechanical and Automotive Industries.
+        </p>
+
+        <div class="content-section">
+            <div class="features">
+                <h3>Here are the features of CALITRACK 4</h3>
+                <ul>
+                    <li>Compatible for Data management of Gauges, Instruments as well as Fixtures</li>
+                    <li>User-friendly Interface, with password protection</li>
+                    <li>Multitasking tabular theme</li>
+                    <li>Effective Calibration Data management and analysis</li>
+                    <li>MS Office based software, which does not need additional operating platforms</li>
+                    <li>Multiple records and analysis tools like – Wear analysis, repair history, History cards, Call
+                        back reports, issue history, etc.</li>
+                    <li>In line with ISO – TS requirements</li>
+                    <li>Built in IS standards of acceptance criteria for gauges and standard templates for instruments
+                    </li>
+                    <li>Asset – Budget cost analysis feature</li>
+                </ul>
+            </div>
+            <div class="benefits">
+                <h3>Benefits of CALITRACK 4</h3>
+                <ul>
+                    <li>Tailormade for paperless Calibration data management</li>
+                    <li>Multi-level Password protection</li>
+                    <li>Local Server compatible for data protection</li>
+                    <li>User-friendly interface and effective communication</li>
+                    <li>Time management – Save up to 50% of the time in context to manual data management</li>
+                    <li>Work efficiency – Increase staff efficiency</li>
+                    <li>Increased Productivity – Manage the same set up with up to 30% less manpower</li>
+                    <li>Simplified decision making with multiple analysis and data filter provisions</li>
+                    <li>Effective data and records retention</li>
+                    <li>Zero Search effort/time for quick and easy Audit Fetching</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="other-services">
+            <h5 class="section-tag">Other Services of</h5>
+            <h1 class="main-heading">Customized Software</h1>
+            <div class="service-items">
+                <div class="item">✔️ Calibration Software</div>
+                <div class="item">✔️ Software For Quality Department</div>
+                <div class="item">✔️ Planning And Production Software</div>
+                <div class="item">✔️ Laboratory Management Software</div>
+            </div>
+        </div>
+    </section>
+    {% include "3/components/footer.html" %}
+    {% endblock %}

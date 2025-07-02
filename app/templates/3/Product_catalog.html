@@ -1,0 +1,44 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "3/components/header.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product catalog and Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+</head>
+
+<body>
+    <section class="about-banner">
+        <div>
+            <h1>Product catalog and Library</h1>
+            <p class="breadcrumb">
+                <a href="/">Home</a> &nbsp;›&nbsp; <span>Product catalog and Library</span>
+            </p>
+        </div>
+    </section>
+    <section class="product-section">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/static/images/logo_1.jpg" alt="Godrej Material Handling" />
+            </div>
+            <div class="product-card">
+                <img src="/static/images/logo_2.jpg" alt="Baker Precision" />
+            </div>
+            <div class="product-card">
+                <img src="/static/images/logo_3.jpg" alt="Luthra Precision Equipment" />
+            </div>
+            <div class="product-card">
+                <img src="/static/images/logo_4.png" alt="Crystal" />
+            </div>
+            <div class="product-card">
+                <img src="/static/images/logo_5.png" alt="AIS" />
+            </div>
+            <div class="product-card">
+                <img src="/static/images/logo_6.jpg" alt="Unity Since 1970" />
+            </div>
+        </div>
+    </section>
+
+    {% include "3/components/footer.html" %}
+    {% endblock %}

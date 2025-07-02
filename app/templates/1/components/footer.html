@@ -1,0 +1,23 @@
+<section id="footer">
+    <footer class="newsletter-footer">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <p><span>Knowledge is power.</span><br>Sign up to reach out {{ contact.name }}.</p>
+
+                <div class="contact-one">
+                    <h2><span>Contact</span></h2>
+                    <p>Email: {{ contact.email }}</p>
+                </div>
+            </div>
+
+            <form class="newsletter-form" action="#" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
+    <div class="footer-one">
+        <p>&copy; 2025 {{ contact.name }}. All rights reserved.</p>
+    </div>
+</section>

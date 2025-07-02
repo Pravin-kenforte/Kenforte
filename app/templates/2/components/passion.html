@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passion Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <section id="work" class="passion-section">
+        <div class="carousel-section">
+            <div class="section-header">
+                <h2>{{ passions.section_title }}</h2>
+                <p>{{ passions.section_subtitle }}</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    {% for item in passions["items"] %}
+
+                    <div class="passion-box">
+                        <div class="icon-box"><i class="{{ item.icon }}"></i></div>
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const track = document.getElementById("carouselTrack");
+        const cards = document.querySelectorAll(".passion-box");
+        const cardsPerView = 3;
+        const cardWidth = 380;
+        const gap = 30;
+        let index = 0;
+
+        const maxIndex = Math.ceil(cards.length / cardsPerView) - 1;
+
+        setInterval(() => {
+            index++;
+            if (index > maxIndex) {
+                index = 0;
+            }
+            const shift = index * (cardWidth + gap) * cardsPerView;
+            track.style.transform = `translateX(-${shift}px)`;
+        }, 4000);
+    </script>
+
+
+</body>
+
+</html>

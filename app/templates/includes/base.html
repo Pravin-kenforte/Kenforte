@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else 'Kenforte Portal' }}</title>
+
+    <!-- Static CSS (custom global styles) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename=static_css_file) }}">
+    <link rel="stylesheet" href="{{ url_for('main.theme_css') }}">
+
+    <!-- Dynamic CSS files from layout config -->
+    {% if css_files %}
+    {% for css in css_files %}
+    <link rel="stylesheet" href="{{ css }}">
+    {% endfor %}
+    {% endif %}
+</head>
+
+<body style="font-family: var(--font-family); background-color: var(--primary-color); color: var(--secondary-color);">
+
+    <!-- 🔘 Theme Toggle Button (HTML + CSS + JS included in this file) -->
+    {% include 'includes/toggle_button.html' %}
+
+    <!-- Page Blocks -->
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+
+</body>
+
+</html>

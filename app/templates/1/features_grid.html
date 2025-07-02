@@ -1,0 +1,29 @@
+{% extends "includes/base.html" %}
+{% block content %}
+{% include "components/header.html" %}
+
+<head>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<section class="why-opennode-section">
+    <h2>{{ why_kenforte.heading }}</h2>
+    <div class="features-row">
+        {% for key, feature in why_kenforte.features.items() %}<!--here we are using the looping -->
+        <div class="feature-box">
+            <img src="{{ url_for('static', filename=feature.image) }}" alt="{{ feature.alt }}">
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="cta" class="cta">
+    <div class="text-content-cta">
+        <h1>{{ cta.title }}</h1>
+        <p>{{ cta.decription }}</p>
+        <button class="cta-btn">Learn more</button>
+    </div>
+</section>
+{% include "components/footer.html" %}
+{% endblock %}
