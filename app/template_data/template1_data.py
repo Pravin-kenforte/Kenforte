@@ -1,4 +1,4 @@
-TEMPLATE_FOLDER_1 = '1/app/templates'
+TEMPLATE_FOLDER_1 = 'app/templates/1'
 TEMPLATE_1= {
         'template_dir':TEMPLATE_FOLDER_1,
                 'header': {
@@ -15,6 +15,7 @@ TEMPLATE_1= {
                     'name': 'KenForte',
                     'email': 'info@kenforte.com'
                 },
+                
                 'features': {
                     'bitcoin': {
                         'image': 'images/learning.png',

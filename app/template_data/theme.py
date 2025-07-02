@@ -16,7 +16,7 @@ THEME_CONFIG = {
         'button_color': '#007bff',
         'font_family': 'Poppins, sans-serif',
         'logo_path': '/static/images/logo1.png',
-        'static_css_file': 'styles/styles.css'
+        'static_css_file': 'styles/1/styles.css'
     },
     '2': {
         **TEMPLATE_2,
@@ -25,7 +25,7 @@ THEME_CONFIG = {
         'button_color': '#17a2b8',
         'font_family': 'Poppins, sans-serif',
         'logo_path': '/static/images/logo2.png',
-        'static_css_file': 'styles/styles2.css'
+        'static_css_file': 'styles/2/styles.css'
     },
     '3': {
         **TEMPLATE_3,
@@ -34,7 +34,7 @@ THEME_CONFIG = {
         'button_color': '#ff9900',
         'font_family': 'Roboto, sans-serif',
         'logo_path': '/static/images/logo3.png',
-        'static_css_file': 'styles/styles3.css'
+        'static_css_file': 'styles/3/styles.css'
     },
     '4': {
         **TEMPLATE_4,
@@ -43,7 +43,7 @@ THEME_CONFIG = {
         'button_color': '#00adb5',
         'font_family': 'Open Sans, sans-serif',
         'logo_path': '/static/images/logo4.png',
-        'static_css_file': 'styles/styles4.css'
+        'static_css_file': 'styles/4/styles.css'
     },
     '5': {
         **TEMPLATE_5,
